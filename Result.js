@@ -1,45 +1,41 @@
 import React from 'react';
-import "../styles/Result.css"
+import CardItem from './CardItem';
+import 'C:/Users/acer/destination-project/src/styles/Result.css'
+import {Link} from 'react-router-dom';
+import Slider from 'C:/Users/acer/destination-project/src/components/Slider/icons/Slider.js'
 
-
-const Result = () => {
+function Result() {
   return (
-    <div>
-      <form>
-      <div class="container">
-        <h1>Here is your Destination to EXPLORE</h1>
-    
-        <hr></hr>
-
-        <label for="place"><b>Different Places</b></label>
-        <input type="text" placeholder="" name="place" required></input>
-        <label for="image"><b>Images</b></label>
-        <input type="text" placeholder="" name="image" required></input>
-
-        <label for="info"><b>Detailed Info</b></label>
-        <input type="text" placeholder="" name="info" required></input>
-
-        <label for="method"><b>Travel Method</b></label>
-        <input type="text" placeholder="" name="method" required></input>
-
-
-
-        <label for="distance"><b>Distance</b></label>
-        <input type="text" placeholder="" name="distance" required></input>
-
-        <label for="recommend"><b>Recommendations</b></label>
-        <input type="text" placeholder="" name="recommend" required></input>
-
-        
-
-        <div class="clearfix">
+    <div className='cards'>
+      <h1><i>Here is your Travel Hole!!!</i>!</h1>
+      <div className='cards__container'>
+        <div className='cards__wrapper'>
+          <ul className='cards__items'>
+            <CardItem 
+              src=''
+              text='Get into the magical journey and expect'
+              label='Adventure'
+              path='/Final'
+            />
+            <CardItem
+              src=''
+              text='Get into the magical journey and expect the unexpected'
+              label='Luxury'
+              path='/Final'
+              
+            />
+          </ul>
+           
+             
           
-          <button type="submit" class="signupbtn">!!!HAPPY JOURNEY!!!</button>
         </div>
       </div>
-      </form>
     </div>
   );
 }
+
+
+            
+
 
 export default Result;
