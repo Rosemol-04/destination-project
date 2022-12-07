@@ -1,6 +1,6 @@
 import React from 'react';
 import CardItem from './CardItem';
-import 'C:/Users/acer/destination-project/src/styles/Result.css'
+import 'C:/Users/acer/destination-project/src/styles/demo.css'
 import {Link} from 'react-router-dom';
 import Slider from 'C:/Users/acer/destination-project/src/components/Slider/icons/Slider.js'
 
@@ -12,16 +12,16 @@ function Result(props) {
         <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardItem 
-              src='/images/mountain1.jpg'
+              src='/images/beach1.jpg'
               text='Get into the magical journey and expect the unexpected'
-              label='Mount Everest'
-              path='/Final'
+              label=' Kovalam Beach'
+              path='/New'
             />
             <CardItem
-              src='/images/mountain2.jpg'
+              src='/images/beach3.jpg'
               text='Get into the magical journey and expect the unexpected'
-              label='Mount Denali'
-              path='/Happy'
+              label=' Bekal Beach '
+              path='/Last'
               
             />
           </ul>

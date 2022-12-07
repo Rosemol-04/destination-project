@@ -3,7 +3,7 @@ import React from 'react';
 import "../styles/Final.css"
 import {Link} from 'react-router-dom';
 
-const Final = () => {
+const Happy = () => {
   return (
     <div>
       <form>
@@ -14,7 +14,7 @@ const Final = () => {
 
         <label for="type"><b>Destination Name</b></label>
         
-         <output type="text" placeholder="International/Local" name="type" required>Mount Everest , Nepal</output> 
+         <output type="text" placeholder="International/Local" name="type" required>Mount Denali,North America</output> 
 
 
         <label for="area"><b>Detailed Info</b></label>
@@ -24,12 +24,12 @@ const Final = () => {
         <output type="text" placeholder="Flight/Train/Bus/Trucking" name="mode" required>Flight</output>
 
         <label for="expenditure"><b>Expenditure</b></label>
-        <output type="text" placeholder="Expected expenses" name="expenditure" required>80,000</output>
+        <output type="text" placeholder="Expected expenses" name="expenditure" required></output>
 
 
 
         <label for="company"><b>Distance</b></label>
-        <output type="text" placeholder="Enter interested travel company" name="company" required>2171 kM</output>
+        <output type="text" placeholder="Enter interested travel company" name="company" required></output>
 
         <label for="season"><b>Recommendations</b></label>
         <output type="text" placeholder="Summer/Winter/Autumn/Rainy" name="season" required></output>
@@ -48,4 +48,4 @@ const Final = () => {
   );
 }
 
-export default Final;
+export default Happy;

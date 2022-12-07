@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../styles/signin.css"
 import {Link} from 'react-router-dom';
 import { ReactDOM } from 'react';
@@ -17,39 +17,71 @@ render(){
   }
 }
 
+
+
 const FormHeader = props => (
     <h2 id="headerTitle">{props.title}</h2>
 );
-const Form = props => (
-   <div>
-     <FormInput description="Username" placeholder="Enter your username" type="text" />
-     <FormInput description="Password" placeholder="Enter your password" type="password"/>
-     <FormButton title=<Link to='/Destinationfind'>Log In</Link>/>
+const Form = (props) => {
+  const [uname,setUserName] = useState("");
+  const [passwd,setPasswd] = useState("");
+  return (
+<div>
+     <FormInput description="Username" placeholder="Enter your username" type="text" fun={setUserName}/>
+     <FormInput description="Password" placeholder="Enter your password" type="password" fun={setPasswd}/>
+     <FormButton title=<Link to='/Example' data={{uname,passwd}}>Log In</Link>/>
    </div>
-);
+  )
+   
+;
+}
 
-const FormButton = props => (
-
+const FormButton = (props) => {
+  let b = props.title.props.data;
+  
+  const body = JSON.stringify(b);
+  return (
   <div id="button" class="row">
 
-    <button>{props.title}</button>
+  <button onClick={async (e)=>{
+    console.log("hello");
+    
+    const resp = await fetch("http://localhost:8000/login",{
+      headers: {
+        "Content-type": "application/json",
+      },
+      body,
+    });
 
-  </div>
+    console.log("hello",resp);
+  }}>{props.title}</button>
 
-);
+</div>
+)
+  
+
+};
 
 
-const FormInput = props => (
+const FormInput = (props) => {
+  
 
+
+  return ( 
   <div class="row">
 
-    <label>{props.description}</label>
+  <label>{props.description}</label>
 
-    <input type={props.type} placeholder={props.placeholder}/>
+  <input type={props.type} placeholder={props.placeholder} onChange={(e)=>{
+    props.fun(e.target.value);
+    console.log(e.target.value);
+  }}/>
 
-  </div>  
+</div>  );
 
-);
+ 
+
+};
 
 const OtherMethods = props => (
 

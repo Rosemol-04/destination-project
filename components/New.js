@@ -3,7 +3,7 @@ import React from 'react';
 import "../styles/Final.css"
 import {Link} from 'react-router-dom';
 
-const Final = () => {
+const New = () => {
   return (
     <div>
       <form>
@@ -14,22 +14,22 @@ const Final = () => {
 
         <label for="type"><b>Destination Name</b></label>
         
-         <output type="text" placeholder="International/Local" name="type" required>Mount Everest , Nepal</output> 
+         <output type="text" placeholder="International/Local" name="type" required>Kovalam Beach</output> 
 
 
         <label for="area"><b>Detailed Info</b></label>
         <output type="text" placeholder="Mountain/Beach/Island/Forest" name="area" required></output>
 
         <label for="mode"><b>Travel method</b></label>
-        <output type="text" placeholder="Flight/Train/Bus/Trucking" name="mode" required>Flight</output>
+        <output type="text" placeholder="Flight/Train/Bus/Trucking" name="mode" required>Flight/Train</output>
 
         <label for="expenditure"><b>Expenditure</b></label>
-        <output type="text" placeholder="Expected expenses" name="expenditure" required>80,000</output>
+        <output type="text" placeholder="Expected expenses" name="expenditure" required>10,000</output>
 
 
 
         <label for="company"><b>Distance</b></label>
-        <output type="text" placeholder="Enter interested travel company" name="company" required>2171 kM</output>
+        <output type="text" placeholder="Enter interested travel company" name="company" required>235 kms</output>
 
         <label for="season"><b>Recommendations</b></label>
         <output type="text" placeholder="Summer/Winter/Autumn/Rainy" name="season" required></output>
@@ -48,4 +48,4 @@ const Final = () => {
   );
 }
 
-export default Final;
+export default New;
